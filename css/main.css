@@ -8,7 +8,7 @@ ul,ol{ list-style: none;}
 .clear{ clear: both;}
 /* header */
 .nav{ height: 70px; background: #292f3c;}
-.navbar{ width: 100%; border: none; z-index: 10; position: fixed; height: 70px; border-radius: 0; background: #292f3c; margin: 0;}
+.navbar{ width: 100%; border: none; z-index: 1100; position: fixed; height: 70px; border-radius: 0; background: #292f3c; margin: 0;}
 .nav-bottom{ border-bottom: 3px solid #e7e7e7;}
 .navbar-header{ line-height: 70px;}
 .nav-list{ float: right; margin: 0; background: #292f3c;}
@@ -57,16 +57,11 @@ span:focus{ outline: none;}
 .col-right{ margin-right: -125px; width: 617px;}
 .what-img{}
 .work-center .what-introduce{ width: 655px;}
-/*.work-center .col-md-5{ width: 55%;}
-.work-center .col-left{ margin-left: -60px;}
-.work-center .col-right{ margin-right: }*/
-
 
 .work{ background: #f2f2f2; height: 780px;}
 .work-center{ margin-top: 140px;}
 .work-li li{ font-size: 20px; line-height: 40px;}
 .work-bg{ width: 13px; margin-right: 10px; height: 11px; display: inline-block; background: url("../images/bg.png") no-repeat; background-position: -25px 0;}
-
 
 .choose{ background: #fff;}
 .choose-center{ margin: 140px 0 155px 0;}
@@ -86,7 +81,6 @@ span:focus{ outline: none;}
 
 
             /* search result contents */
-
 .select-group{ margin-top: 13px;}
 .top-title{ width: 100%; line-height: 42px; font-weight: 500; font-size: 20px; color: #24d0b3; border-bottom: 2px solid #24d0b3;}
 .keywords-table{ margin-top: 36px;}
@@ -120,11 +114,11 @@ span:focus{ outline: none;}
 .app-num tr td{ border-top: 1px solid #f0f0f0; border-left: 1px solid #f0f0f0;}
 
 
-            /* app top  */
+            /* app top  contents */
 .update{ float: right; font-size: 12px; color: #999; padding-right: 10px;}
 .time-line{ margin-top: 20px;}
 .time-line-left{ float: left; padding-right: 10px; font-size: 12px; color: #999;}
-.time-line-right{ float: left; width: 990px; margin-bottom: 0;}
+.time-line-right{ float: left; width: 990px; margin-bottom: 15px;}
 .time-line-right>li{ float: left; position: relative;}
 .time-point{ border: 1px solid #e2e2e2; border-radius: 5px; margin-bottom: 20px; overflow: hidden;}
 .time-point:hover{ overflow: visible;}
@@ -153,13 +147,75 @@ span:focus{ outline: none;}
 .time-sel a{ color: #fff;}
 
 
+/* keywords contents */
+.keywords{ margin-bottom: 40px; border-right: 1px solid #eeeeee; border-left: 1px solid #eeeeee;}
+.keywords-top{ border-top: 1px solid #eeeeee; border-bottom: 1px solid #eeeeee;}
+.keywords-top p{ margin-bottom: 0; text-align: left; font-size: 14px; color: #2f333e; border-radius: 1px; background: #f9f9f9; line-height: 38px; float: left;}
+.kt-l{ width: 10%; padding-left: 30px;}
+.kt-c{ width: 70%; padding-left: 10px;}
+.kt-r{ width: 20%;}
+.keywprds-list{ margin: 0;}
+.keywprds-list li{ border-bottom: 1px solid #eeeeee;}
+.data{ height: 40px; position: relative;}
+.data div{ line-height: 40px; font-size: 14px; color: #8a8a8a; float: left; text-align: left;}
+.data-number{ width: 10%; padding-left: 40px;}
+.data-name{ width: 70%; padding-left: 10px;}
+.data-val{ width: 20%; padding-left: 10px;}
+.dec{ position: absolute; width: 8px; height: 9px; top: 15px; right: 60px; background: url("../images/bg.png") no-repeat; background-position: -26px -12px;}
+.swiper-container{ height: 0; margin: 0 45px;}
+.swiper-button-prev{ position: absolute; top: 0; left: 0; z-index: 10; width: 8px; height: 14px; margin-top: 65px; background: url("../images/bg.png") no-repeat; background-position: -26px -25px;}
+.swiper-button-next{ position: absolute; top: 0; right: 0; z-index: 10; width: 8px; height: 14px; margin-top: 65px; background: url("../images/bg.png") no-repeat; background-position: -27px -44px;}
+.img-number{ width: 100%; line-height: 50px; font-size: 14px; color: #8a8a8a; display: block; text-align: center;}
+.swiper-slide{ text-align: center; height: 130px;}
+
+
+/* keywords details contents */
+.key-title{ line-height: 75px; font-size: 18px; color: #333; margin-bottom: 0;}
+.keywores-name{ color: #24d3b6;}
+.key-list li{ border-bottom: 1px solid #eeeeee;}
+.kd-d{ width: 34%; margin: 0; text-align: left; padding-left: 42px; float: left; line-height: 38px;}
+.kd-r{ width: 32%;}
+.kde-dur{ width: 32%;}
+.kde-d{ font-size: 14px; color: #8a8a8a;}
+
+
+/* search contents */
+.app-id{ height: 34px; line-height: 34px; padding-left: 10px; border-radius: 4px; border: 1px solid #ccc;}
+.app-id:focus{ outline: 0;}
+.search-keywords{ margin-top: 10px;}
+.search-t{ font-size: 12px; color: #999999; line-height: 26px;}
+.search-key{ width: 100%; height: 60px; padding-left: 10px; border: 1px solid #e2e2e2; border-radius: 4px; resize: none;}
+.search-key:focus{ outline: none;}
+.btn-list a{ display: block; float: left; border: 1px solid #e2e2e2; margin: 15px 0 34px 15px; width: 70px; height: 34px; border-radius: 3px; background: #f9f9f9; color: #666666; font-size: 14px; text-align: center; line-height: 34px;}
+.btn-list a:hover,.btn-list a:focus{ background: #24d3b6; color: #fff; border: 1px solid #24d3b6;}
+.keywords-top{ height: 40px; background: #f9f9f9; padding-right: 10px;}
+.search-k{ width: 55%; padding-left: 30px;}
+.search-k p{}
+.search-index{ width: 15%;}
+.search-rank{ width: 15%;}
+.search-result{ width: 15%;}
+.keywords-top>div{ float: left; background: #f9f9f9;}
+.data-key{ width: 55%; padding-left: 30px;}
+.data-index{ width: 15%;}
+.data-rank{ width: 14.5%;}
+.data-result{ width: 15%;}
+.top-bot{ width: 10px; height: 100%; display: block; margin-left: 8px; float: left; margin-top: 6px;}
+.top-bot span{ width: 10px; height: 10px; display: block; margin-top: 2px;}
+.trg-top{ border-width: 0 5px 5px 5px; border-color: transparent transparent #e4e3e3 transparent; border-style: solid;}
+.trg-bot{ border-width: 5px 5px 0 5px; border-color: #e4e3e3 transparent #e4e3e3 transparent; border-style: solid;}
+.trg-blue{ border-color: #24d3b6 transparent #24d3b6 transparent;}
 
 
 
 
 
 
-/* footer */
+
+
+
+
+
+    /* footer */
 .footer{ background: #1e2432;}
 .foot-center{ margin-top: 60px; padding-bottom: 60px;}
 .about-ap{ font-size: 14px; color: #d0d3d8; line-height: 25px; margin: 0;}

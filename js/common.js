@@ -41,7 +41,7 @@ $(function () {
     });
 
     $(window).scroll(function () {
-       var H = $(Window).scrollTop();
+       var H = $(window).scrollTop();
        if( H >= 500){
            $(".nav-border").css({borderBottom:"3px solid #e7e7e7"});
        }else{
@@ -50,9 +50,60 @@ $(function () {
     });
 
 
+            // keywords swiper
+
+    $(".data").click(function () {
+        var h = $(this).parent().height();
+        if( h <= 42){
+            $(this).children(".dec").css({transform:"rotate(-180deg)"});
+            $(this).next().animate({height:"140px"},500);
+            $(this).next().children(".swiper-container").animate({height:"140px"});
+            $(this).next().css({margin:"10px 30px 0 30px",borderTop:"1px solid #eeeeee"});
+            var index = $(".data").index($(this)) + 1;
+            $(this).next().children(".swiper-container").addClass("swiper-container"+index);
+            var mySwiper = new Swiper( '.swiper-container' + index,{
+                pagination: '.swiper-pagination',
+                loop:false,
+                grabCursor: true,
+                paginationClickable: true,
+                slidesPerGroup:10,
+                slidesPerView:10,
+                autoplayDisableOnInteraction:true,
+                autoplay: false
+            });
+            $(this).next().children(".swiper-container").children('.swiper-button-prev').on('click', function(e){
+                e.preventDefault();
+                mySwiper.swipePrev()
+            });
+            $(this).next().children(".swiper-container").children('.swiper-button-next').on('click', function(e){
+                e.preventDefault();
+                mySwiper.swipeNext()
+            });
+        }else{
+            $(this).next().animate({height:"0"},500);
+            $(this).next().children(".swiper-container").animate({height:"0"},500);
+            $(this).next().css({margin:"0 30px 0 30px",borderTop:"1px solid #fff"});
+            $(this).children(".dec").css({transform:"rotate(-360deg)"});
+        }
+    });
             // time line
     /*$(".time-point-event ul").parent().parent().css({background:"#24d3b6",border:"1px solid #fff"});
     $(".time-point-event ul").parent().prev().css({color:"#fff"});*/
 
 
-            });
+            //    keywords rank trangle-blue
+    $(".keywords-top>div").click(function () {
+        var str1 = $(this).children(".top-bot").children(".trg-top").attr("class").length;
+        var str2 = $(this).children(".top-bot").children(".trg-bot").attr("class").length;
+        if(str1<=7) {
+            $(".trg-bot").removeClass("trg-blue");
+            $(".trg-top").removeClass("trg-blue");
+            $(this).children(".top-bot").children(".trg-top").addClass("trg-blue");
+        }else{
+            $(".trg-top").removeClass("trg-blue");
+            $(".trg-bot").removeClass("trg-blue");
+            $(this).children(".top-bot").children(".trg-bot").addClass("trg-blue");
+        }
+    })
+
+});
