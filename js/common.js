@@ -104,6 +104,33 @@ $(function () {
             $(".trg-bot").removeClass("trg-blue");
             $(this).children(".top-bot").children(".trg-bot").addClass("trg-blue");
         }
-    })
+    });
+
+
+            //    textarea copy , search , empty event
+    $(".sear").click(function () {
+        var search = $(".search-key").val();
+    });
+
+    $(".copy").click(function () {
+        var copy = $(".search-key").val();
+        $(this).css({background:"#24d3b6",color:"#fff"});
+        $(this).html("Copy Successful");
+        setTimeout(function () {
+            $(".copy").css({background:"#f9f9f9",color:"#666", border:"1px solid #e2e2e2"}).html("Copy").mouseenter(function () {
+                $(this).css({background:"#24d3b6",color:"#fff"});
+            }).mouseleave(function () {
+                $(this).css({background:"#f9f9f9",color:"#666"});
+            });
+        },1000);
+    });
+
+    $(".empty").click(function () {
+       $(".search-key").val("");
+    });
+
+
+            //    qv chu lian xu dian ji shi de lan se
+    $(".keywords-top div p,.data div").bind("selectstart", function () { return false; });
 
 });
