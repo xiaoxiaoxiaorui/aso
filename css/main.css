@@ -2,6 +2,7 @@
 body{ list-style: none; font-size: 14px; font-family: "Segoe UI", Helvetica, sans-serif,"Open Sans",Arial; color: #666666;}
 a{ color: inherit;}
 a:hover,:active,a:focus{ text-decoration: none; color: inherit; cursor: pointer;}
+p{ margin-bottom: 0;}
 
 ul,ol{ list-style: none;}
 .wrap{ width: 100%; position: relative;}
@@ -212,6 +213,34 @@ span:focus{ outline: none;}
 .keywords-top .trand-index{ width: 20%; float: right;}
 .data-trand-key{ width: 80%; float: left; padding-left: 30px;}
 .data-trand-index{ width: 20%; padding-left: 15px;}
+
+
+/* service rank */
+.tracking{ background: #f2f2f2;}
+.tracking-top{ text-align: center; padding-top: 108px; line-height: 125px; font-size: 42px; color: #333; font-family: Open Sans;}
+.tracking-con{ text-align: center; font-size: 24px; color: #666;}
+.tracking-img{ margin: 90px 0 130px 0; text-align: center;}
+.pushing-top{ margin-top: 120px; text-align: center;}
+.pushing-title{ line-height: 90px; font-size: 48px; color: #333; text-align: center;}
+.blue-line{ width: 60px; height: 2px; background: #24d3b6; display: inline-block;}
+.pushing-con{ margin-top: 240px; margin-bottom: 360px;}
+.col-md-3{ width: 33.33%; padding: 0 64px;}
+.col-img{ width: 90px; height: 90px; line-height: 90px; text-align: center; border: 1px solid #e1e1e1; border-radius: 50%; margin: 0 auto;}
+.col-tit{ font-size: 24px; color: #333; text-align: center; margin-top: 25px;}
+.col-text{ font-size: 18px; color: #666666; text-align: center; line-height: 24px; margin-top: 15px;}
+.col-img span{ width: 33px; height: 33px; display: inline-block; vertical-align: middle;}
+.col-bg1{ background: url("../images/bg.png") no-repeat; background-position: 0 -101px;}
+.col-bg2{ background: url("../images/bg.png") no-repeat; background-position: 0 -142px;}
+.col-bg3{ background: url("../images/bg.png") no-repeat; background-position: 0 -190px;}
+.chooseing{ background: #f2f2f2;}
+.col-md-2{ width: 33.3%;}
+.chooseing-img img{ width: 100%;}
+.chooseing-con{ margin-top: 130px; margin-bottom: 175px;}
+.chooseing-col{ border-radius: 3px; background: #fff; box-shadow: 2px 2px 5px rgba(102,102,102,0.15), -2px 0 5px rgba(102,102,102,0.15), 2px 0 5px rgba(102,102,102,0.15), -2px 2px 5px rgba(102,102,102,0.15);}
+.chooseing-tit{ padding: 30px 25px 0 25px; margin: 0; text-align: center; font-size: 20px; color: #24d3b6;}
+.chooseing-text{ padding: 20px 25px 0 25px; margin: 0; font-size: 16px; color: #333; line-height: 24px;}
+.chooseing-group{ height:225px;}
+
 
 
 
