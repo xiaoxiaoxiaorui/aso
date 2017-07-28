@@ -135,12 +135,7 @@ $(function () {
 
 
 
-            //    lazyload images
-    $(document).ready(function() {
-        $("img.lazy-load").lazyload({
-            effect : "fadeIn"
-        });
-    });
+
 
 
             //    e-mail test

@@ -761,5 +761,13 @@
 <script type="text/javascript" src="js/jquery.lazyload.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript" src="js/top-tppl.js"></script>
+<script type="text/javascript">
+    //    lazyload images
+    $(document).ready(function() {
+        $("img.lazy-load").lazyload({
+            effect : "fadeIn"
+        });
+    });
+</script>
 </body>
 </html>
