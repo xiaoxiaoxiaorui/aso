@@ -133,4 +133,26 @@ $(function () {
             //    qv chu lian xu dian ji shi de lan se
     $(".keywords-top div p,.data div").bind("selectstart", function () { return false; });
 
+
+
+            //    lazyload images
+    $(document).ready(function() {
+        $("img.lazy-load").lazyload({
+            effect : "fadeIn"
+        });
+    });
+
+
+            //    e-mail test
+    $(".email").blur(function () {
+        if( this.value=="" || ( this.value!="" && !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value) ) ){
+            var errorMsg = 'Please enter the correct e-mail address.';
+            $(".formtips").html(errorMsg);
+            $(".tips").css({display:"block"});
+        }else{
+            var okMsg = 'Entered correctly.';
+            $(".formtips").html(okMsg);
+        }
+    });
+
 });
