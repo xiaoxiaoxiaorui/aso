@@ -68,7 +68,7 @@ span:focus{ outline:none;}
 .datetimepicker table tr td.active:active, .datetimepicker table tr td.active:hover:active,
 .datetimepicker table tr td.active.disabled:active, .datetimepicker table tr td.active.disabled:hover:active,
 .datetimepicker table tr td.active.active, .datetimepicker table tr td.active:hover.active,
-.datetimepicker table tr td.active.disabled.active, .datetimepicker table tr td.active.disabled:hover.active{ background-color: #24d3b6;}
+.datetimepicker table tr td.active.disabled.active, .datetimepicker table tr td.active.disabled:hover.active{ background-color: #24d3b6; color: #fff;}
 .datetimepicker table tr td.active, .datetimepicker table tr td.active:hover, .datetimepicker table tr td.active.disabled, .datetimepicker table tr td.active.disabled:hover{ background-image: none;}
 .datetimepicker table tr td span.active:active, .datetimepicker table tr td span.active:hover:active,
 .datetimepicker table tr td span.active.disabled:active, .datetimepicker table tr td span.active.disabled:hover:active,

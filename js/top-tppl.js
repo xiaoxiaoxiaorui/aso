@@ -18,6 +18,10 @@ $(function () {
     $(".select2").width(150).click(function () {
         $(".select2-dropdown").append("<div class='trangle  bot-trangle'></div>");
     });
+    $(".select2").click(function () {
+        var str = "<div class='region-line'>Asia</div>";
+        $(".select2-results__options>li").not("[id]").append(str).removeClass("select2-results__option");
+    })
 
     //     日期
     var date = new Date();
@@ -46,13 +50,22 @@ $(function () {
     });
 
     //    select
-    $(".dropdown-menu>li>a").click(function () {
+
+    $(".drop-menu li").click(function () {
+        $(this).parent().children("li").css({color:"#fff"});
+        var str = $(this).html();
+        $(this).parent().prev().html(str+'<i class="caret"></i>');
+        $(this).css({color:"#24d3b6"});
+    });
+
+    $(".Cate-ul>li>a").click(function () {
         $(this).parent().parent().children("li").css({color:"#fff"});
+        $(this).parent().parent().children("li").children("ul").children("li").css({color:"#fff"});
         var str = $(this).html();
         $(this).parent().parent().prev().html(str+'<i class="caret"></i>');
         $(this).parent().css({color:"#24d3b6"});
     });
-    $(".dropdown-menu>li>ul>li").click(function () {
+    $(".Cate-ul>li>ul>li").click(function () {
         $(this).parent().parent().parent().children("li").css({color:"#fff"});
         $(this).parent().children("li").css({color:"#fff"});
         var str = $(this).children("a").html();

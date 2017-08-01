@@ -6,48 +6,20 @@
 $(function () {
 
             //    nav
-
-    var w = window.innerWidth;
-    if( w < 768){
-        $(".nav-list>li").click(function () {
-            $(this).css({color:"#fff",borderBottom:"2px solid transparent"});
-            $(this).children("ul").slideToggle(200);
-        });
-    }else{
-        $(".nav-list>li").mouseenter(function () {
-            $(this).css({color:"#24d3b6",borderBottom:"2px solid #24d3b6"});
-            $(this).children("ul").css({display:"block"});
-        }).mouseleave(function () {
-            $(this).css({color:"#fff",borderBottom:"2px solid transparent"});
-            $(this).children("ul").css({display:"none"});
-        });
-    }
-    $(window).resize(function () {
-        var w = window.innerWidth;
-        if( w < 768){
-            $(".nav-list>li").click(function () {
-                $(this).css({color:"#fff",borderBottom:"2px solid transparent"});
-                $(this).children("ul").slideToggle(200);
-            });
-        }else{
-            $(".nav-list>li").mouseenter(function () {
-                $(this).css({color:"#24d3b6",borderBottom:"2px solid #24d3b6"});
-                $(this).children("ul").css({display:"block"});
-            }).mouseleave(function () {
-                $(this).css({color:"#fff",borderBottom:"2px solid transparent"});
-                $(this).children("ul").css({display:"none"});
-            });
+    var windowUrl = window.location;
+    var arr = $(".nav-list li a");
+    var i = 0;
+    for(i;i<arr.length;i++){
+        var url = $(arr[i]).attr("href");
+        if( url == windowUrl){
+            if(i == 0){
+                $(arr[i].parentNode).addClass("nav-active");
+            }else {
+                $(arr[i].parentNode).addClass("nav-li-active");
+                $(arr[i].parentNode.parentNode.parentNode).addClass("nav-active");
+            }
         }
-    });
-
-    $(window).scroll(function () {
-       var H = $(window).scrollTop();
-       if( H >= 500){
-           $(".nav-border").css({borderBottom:"3px solid #e7e7e7"});
-       }else{
-           $(".nav-border").css({borderBottom:"none"});
-       }
-    });
+    }
 
 
             // keywords swiper
@@ -86,9 +58,7 @@ $(function () {
             $(this).children(".dec").css({transform:"rotate(-360deg)"});
         }
     });
-            // time line
-    /*$(".time-point-event ul").parent().parent().css({background:"#24d3b6",border:"1px solid #fff"});
-    $(".time-point-event ul").parent().prev().css({color:"#fff"});*/
+
 
 
             //    keywords rank trangle-blue

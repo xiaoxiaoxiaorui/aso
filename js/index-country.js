@@ -19,9 +19,12 @@ $(function () {
     }).change(function () {
         $(".select2-selection__rendered span:last-child").html("");
     });
-    $(".select2").width('100%');
+    $(".select2").width('45%');
     $(".select2-selection__rendered span:last-child").html("");
-    $(".select2").append("<input type='text' class='search-word' placeholder='Type Keyword, App Name, App ID or URL'>")
-
+    /*$(".select2").append("<input type='text' class='search-word' placeholder='Type Keyword, App Name, App ID or URL'>")*/
+    $(".select2").click(function () {
+        var str = "<div class='option-line'>Asia</div>";
+        $(".select2-results__options>li").not("[id]").append(str).removeClass("select2-results__option");
+    })
 
 });
