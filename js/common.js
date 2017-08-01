@@ -56,7 +56,7 @@ $(function () {
         var h = $(this).parent().height();
         if( h <= 42){
             $(this).children(".dec").css({transform:"rotate(-180deg)"});
-            $(this).next().animate({height:"140px"},500);
+            $(this).next().animate({height:"140px"},300);
             $(this).next().children(".swiper-container").animate({height:"140px"});
             $(this).next().css({margin:"10px 30px 0 30px",borderTop:"1px solid #eeeeee"});
             var index = $(".data").index($(this)) + 1;
@@ -80,8 +80,8 @@ $(function () {
                 mySwiper.swipeNext()
             });
         }else{
-            $(this).next().animate({height:"0"},500);
-            $(this).next().children(".swiper-container").animate({height:"0"},500);
+            $(this).next().animate({height:"0"},300);
+            $(this).next().children(".swiper-container").animate({height:"0"},300);
             $(this).next().css({margin:"0 30px 0 30px",borderTop:"1px solid #fff"});
             $(this).children(".dec").css({transform:"rotate(-360deg)"});
         }
@@ -114,13 +114,13 @@ $(function () {
 
     $(".copy").click(function () {
         var copy = $(".search-key").val();
-        $(this).css({background:"#24d3b6",color:"#fff"});
+        $(this).css({background:"#ccc"});
         $(this).html("Copy Successful");
         setTimeout(function () {
-            $(".copy").css({background:"#f9f9f9",color:"#666", border:"1px solid #e2e2e2"}).html("Copy").mouseenter(function () {
-                $(this).css({background:"#24d3b6",color:"#fff"});
+            $(".copy").css({background:"#f9f9f9"}).html("Copy").mouseenter(function () {
+                $(this).css({background:"#ccc"});
             }).mouseleave(function () {
-                $(this).css({background:"#f9f9f9",color:"#666"});
+                $(this).css({background:"#f9f9f9"});
             });
         },1000);
     });

@@ -16,7 +16,7 @@ $(function () {
         templateResult: formatState
     });
     $(".select2").width(150).click(function () {
-        $(".select2-dropdown").append("<div class='trangle'></div>");
+        $(".select2-dropdown").append("<div class='trangle  bot-trangle'></div>");
     });
 
     //     日期
@@ -33,7 +33,7 @@ $(function () {
         meridiem: ["上午", "下午"]
     };
     $(".form_datetime").datetimepicker({
-        format: " yyyy-MM-dd",
+        format: "yyyy-MM-dd",
         showSecond: false,
         showMillisec: false,
         autoclose: true,
@@ -45,10 +45,20 @@ $(function () {
         minView: "month"
     });
 
-    //    选项框
-    $(".dropdown-menu li").click(function () {
+    //    select
+    $(".dropdown-menu>li>a").click(function () {
+        $(this).parent().parent().children("li").css({color:"#fff"});
         var str = $(this).html();
-        $(this).parent().prev().html(str+'<i class="caret"></i>');
+        $(this).parent().parent().prev().html(str+'<i class="caret"></i>');
+        $(this).parent().css({color:"#24d3b6"});
+    });
+    $(".dropdown-menu>li>ul>li").click(function () {
+        $(this).parent().parent().parent().children("li").css({color:"#fff"});
+        $(this).parent().children("li").css({color:"#fff"});
+        var str = $(this).children("a").html();
+        $(this).parent().parent().parent().prev().html(str+'<i class="caret"></i>');
+        $(this).css({color:"#24d3b6"});
+        $(this).parent().parent().css({color:"#24d3b6"});
     });
 
 
