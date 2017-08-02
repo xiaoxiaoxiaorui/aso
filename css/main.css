@@ -180,6 +180,8 @@ span:focus{ outline: none;}
 .data div{ line-height: 40px; font-size: 14px; color: #8a8a8a; float: left; text-align: left;}
 .data-number{ width: 10%; padding-left: 40px;}
 .data-name{ width: 70%; padding-left: 10px;}
+.data-name a{ width: 80px; display: block; float: left;}
+.data-name a:hover{ color: #24d3b6;}
 .data-val{ width: 20%;}
 .data-val span{ width: 60px; text-align: center; display: block;}
 .dec{ position: absolute; width: 8px; height: 9px; top: 15px; right: 60px; background: url("../images/bg.png") no-repeat; background-position: -26px -12px;}
@@ -273,7 +275,7 @@ span:focus{ outline: none;}
 
 /* survice keywords contents */
 .survice-ktop{ text-align: center; background: url("../images/survice-bg.png") center no-repeat; background-size: cover;}
-.survice-ktitle{ font-size: 48px; color: #333; text-align: center; line-height: 80px; width: 100%; padding: 450px 90px 0 90px;}
+.survice-ktitle{ font-size: 48px; color: #333; text-align: center; line-height: 80px; width: 100%; padding: 510px 90px 0 90px;}
 .survice-ktxt{ font-size: 26px; color: #5f5f5f; padding-top: 60px; text-align: center;}
 .start-now{ background: #24d3b6; color: #fff; padding: 12px 81px; border-radius: 4px; display: inline-block; font-size: 26px; margin-bottom: 200px; margin-top: 45px;}
 .start-now:hover{ color: #fff; background: #1fbaa0;}

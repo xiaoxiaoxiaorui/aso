@@ -10,7 +10,7 @@
 .select2-container .select2-selection--single{ height: 34px;}
 .dropdown-menu li{ cursor: pointer; color: #fff; line-height: 30px;}
 .dropdown-menu li:hover{ color: #24d3b6;}
-.dropdown-menu li:nth-child(2){ color: #24d3b6;}
+.dropdown-menu li.active{ color: #24d3b6;}
 .btn .caret{ margin-left: 20px;}
 .select2-container--default .select2-selection--single .select2-selection__arrow{ height: 34px; left: auto;}
 .table-condensed{ width: 240px;}

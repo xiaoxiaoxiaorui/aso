@@ -6,7 +6,27 @@
 $(function () {
 
             //    nav
-    var windowUrl = window.location;
+    var s = location.href;           /*  取到页面路径方法  */
+    s=s.replace(/\?.*$/,'');
+    s=s.replace(/^.*\//,'');
+    var arr = $(".nav-list li a");
+    var i = 0;
+    for(i;i<arr.length;i++){
+        var url = $(arr[i]).attr("href");
+        if( url == s){
+            if(i == 0){
+                $(arr[i].parentNode).addClass("nav-active");
+            }else {
+                $(arr[i].parentNode).addClass("nav-li-active");
+                $(arr[i].parentNode.parentNode.parentNode).addClass("nav-active");
+            }
+        }
+    }
+
+
+
+                                      /* 取全路径方法 */
+    /*var windowUrl = window.location;
     var arr = $(".nav-list li a");
     var i = 0;
     for(i;i<arr.length;i++){
@@ -19,7 +39,7 @@ $(function () {
                 $(arr[i].parentNode.parentNode.parentNode).addClass("nav-active");
             }
         }
-    }
+    }*/
 
 
             // keywords swiper
